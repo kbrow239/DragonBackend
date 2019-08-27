@@ -36,9 +36,14 @@ app.listen(PORT, () => {
             throw error;
         }
         database = client.db(DATABASE_NAME);
+        collectionUsers = database.collection("Users");
         collectionDragons = database.collection("Dragons");
         collectionColors = database.collection("Colors");
-        collectionUsers = database.collection("Users");
+        collectionEyes = database.collection("Eyes");
+        collectionBreeds = database.collection("Breeds");
+        collectionPrimaryGenes = database.collection("PrimaryGenes");
+        collectionSecondaryGenes = database.collection("SecondaryGenes");
+        collectionUsers = database.collection("TertiaryGenes");
 
         console.log("Connected to `" + DATABASE_NAME + "`!");
     });
